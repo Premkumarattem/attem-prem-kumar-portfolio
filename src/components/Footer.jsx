@@ -1,5 +1,5 @@
 import React from 'react';
-import { Terminal, ArrowUp } from 'lucide-react';
+import { Terminal, ArrowUp, Mail, Phone, Heart } from 'lucide-react';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -7,34 +7,35 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative z-10 border-t border-cyan-500/20 bg-[#03050c]/90 py-12 px-4 sm:px-6 lg:px-8">
+    <footer className="relative z-10 border-t border-red-500/20 bg-[#060608]/95 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Left Branding */}
         <div className="flex items-center gap-3">
-          <div className="p-2 rounded-lg bg-cyan-950/60 border border-cyan-500/40 text-cyan-400">
+          <div className="p-2 rounded-xl bg-red-950/60 border border-red-500/40 text-red-500">
             <Terminal className="w-5 h-5" />
           </div>
           <div>
-            <p className="font-mono text-sm font-bold text-white tracking-wider">
+            <p className="font-mono text-sm font-bold text-white tracking-wider flex items-center gap-2">
               ATTEM PREM KUMAR
+              <span className="w-1.5 h-1.5 rounded-full bg-red-500"></span>
             </p>
-            <p className="text-[11px] text-cyan-400 font-mono">
-              Software Engineer | Real-Time AI & Full-Stack
+            <p className="text-[11px] text-zinc-400 font-mono">
+              API Web Developer &bull; Full-Stack &bull; Data Analytics
             </p>
           </div>
         </div>
 
         {/* Center Minimal Copyright */}
-        <p className="text-xs text-slate-400 font-mono text-center">
+        <p className="text-xs text-zinc-400 font-mono text-center">
           &copy; {new Date().getFullYear()} Attem Prem Kumar. All rights reserved.
         </p>
 
         {/* Right Scroll to Top */}
         <button
           onClick={scrollToTop}
-          className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono bg-slate-900 border border-cyan-500/30 text-cyan-300 hover:bg-cyan-500 hover:text-black transition-all shadow-[0_0_15px_rgba(0,242,254,0.2)]"
+          className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono bg-[#14141c] border border-red-500/30 text-white hover:bg-red-600 hover:border-red-500 transition-all shadow-[0_0_15px_rgba(239,68,68,0.25)] btn-click-effect"
         >
-          Back to Top <ArrowUp className="w-3.5 h-3.5" />
+          Back to Top <ArrowUp className="w-3.5 h-3.5 text-red-400" />
         </button>
       </div>
     </footer>

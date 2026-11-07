@@ -1,78 +1,60 @@
 import React, { useState } from 'react';
-import { Layers, ExternalLink, Github, Sparkles, CheckCircle2, Shield, CreditCard, Network, Sprout, Utensils, ArrowUpRight, X, Radio, BrainCircuit, Globe } from 'lucide-react';
+import { Layers, ExternalLink, Github, Sparkles, CheckCircle2, Shield, CreditCard, ArrowUpRight, X, Radio, BrainCircuit, Globe, Utensils, Zap, Play } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 export default function ProjectsSection() {
   const [activeProjectModal, setActiveProjectModal] = useState(null);
 
+  // Exactly two projects as requested by the user from resume
   const projects = [
     {
-      id: 'smart-classroom-assistant',
-      title: 'Smart Classroom Assistant',
-      badge: 'Python + FastAPI + Groq AI',
-      category: 'Real-Time AI & Audio Platform',
-      icon: <BrainCircuit className="w-6 h-6 text-cyan-400" />,
-      accent: 'from-cyan-400 via-blue-500 to-purple-600',
-      glow: 'shadow-[0_0_30px_rgba(0,242,254,0.35)]',
-      shortDesc: 'Inclusive real-time smart classroom platform featuring live multilingual speech-to-text, 3-language translation, and automated AI lecture summarization.',
-      fullDesc: 'Built an inclusive real-time smart classroom platform featuring live multilingual speech-to-text, real-time caption translation across 3 languages, and automated AI lecture summarization powered by Groq API and WebSockets/WebRTC.',
+      id: 'eduaccess',
+      title: 'EduAccess',
+      subtitle: 'Real-Time Inclusive Smart Classroom Platform',
+      badge: 'Python &bull; FastAPI &bull; Groq AI',
+      category: 'AI & Real-Time Multilingual Platform',
+      icon: <BrainCircuit className="w-7 h-7 text-red-500" />,
+      accent: 'from-red-600 via-rose-600 to-red-800',
+      glow: 'shadow-[0_0_35px_rgba(239,68,68,0.25)]',
+      shortDesc: 'Built an inclusive, real-time smart classroom platform with live multilingual speech-to-text, caption translation across 3 languages and automated AI lecture summaries.',
+      fullDesc: 'EduAccess is an award-winning real-time inclusive smart classroom platform pitched at Capgemini Tech4Positive Futures Challenge (Semi-Finalist). It features live multilingual audio streaming via WebSockets and WebRTC, instant speech-to-text transcription, simultaneous translation across 3 languages, and automated AI lecture summarization powered by Groq LLM APIs.',
       techStack: ['Python', 'FastAPI', 'WebSockets', 'WebRTC', 'PostgreSQL', 'Groq API', 'Render'],
       features: [
-        'Live multilingual speech-to-text audio streaming via WebSockets & WebRTC',
-        'Real-time caption translation across 3 different languages simultaneously',
-        'Automated AI lecture summarization & key takeaway generation powered by Groq API',
-        'PostgreSQL database for storing structured lecture logs & session transcriptions',
-        'Full cloud deployment on Render for high concurrency & low-latency streaming'
+        'Live multilingual speech-to-text audio streaming powered by WebSockets & WebRTC',
+        'Real-time live caption translation across 3 languages simultaneously',
+        'Automated AI lecture summarization and bulleted takeaways using Groq LLMs',
+        'PostgreSQL database for structured lecture transcripts & user sessions',
+        'Deployed on Render with low-latency streaming and high concurrent handling'
       ],
       githubUrl: 'https://github.com/Premkumarattem/smart-classroom-assistant',
       demoUrl: 'https://smart-classroom-assistant-qmps.onrender.com/'
     },
     {
-      id: 'restaurant-system',
+      id: 'restaurant-reservation',
       title: 'Restaurant Reservation System',
-      badge: 'MERN + JWT + Razorpay',
-      category: 'Full-Stack Web App',
-      icon: <Utensils className="w-6 h-6 text-purple-400" />,
-      accent: 'from-purple-500 via-indigo-500 to-blue-500',
-      glow: 'shadow-[0_0_30px_rgba(127,0,255,0.35)]',
-      shortDesc: 'MERN-based restaurant reservation platform with secure authentication, online booking, and responsive UI, reducing booking time by 60%.',
-      fullDesc: 'Developed a MERN-based restaurant reservation platform with secure authentication, online booking, and responsive UI, reducing booking time by 60%. Integrates JWT authentication and Razorpay payment processing.',
+      subtitle: 'Full-Stack MERN Platform with JWT & Razorpay',
+      badge: 'React &bull; Node &bull; Razorpay',
+      category: 'Full-Stack MERN Application',
+      icon: <Utensils className="w-7 h-7 text-red-500" />,
+      accent: 'from-red-600 via-amber-600 to-red-700',
+      glow: 'shadow-[0_0_35px_rgba(239,68,68,0.25)]',
+      shortDesc: 'Developed a MERN-based reservation platform with secure login, online booking and a responsive interface, which cut booking time by 60%.',
+      fullDesc: 'A complete end-to-end dining table reservation platform allowing users to view menus, check real-time table availability, select preferred seating slots, and make instant online payments. Designed with robust JWT authentication, bcrypt password encryption, and Razorpay integration, cutting customer reservation time by 60%.',
       techStack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Razorpay', 'Vercel', 'Render'],
       features: [
-        'Reduced customer table reservation time by 60% with instant digital booking',
-        'Secure JWT token-based authentication and user session management',
-        'Integrated Razorpay payment gateway for instant online booking payments',
-        'Responsive frontend deployed on Vercel and backend services on Render',
-        'Admin control panel for managing real-time table availability & orders'
+        'Cut customer reservation time by 60% with instant digital booking workflows',
+        'Secure token-based JWT authentication and protected REST API endpoints',
+        'Integrated Razorpay payment gateway with instant booking confirmation receipts',
+        'Frontend deployed on Vercel and backend services hosted on Render',
+        'Admin dashboard for managing tables, slot schedules, and real-time orders'
       ],
       githubUrl: 'https://github.com/Premkumarattem/restaurant-reservation',
       demoUrl: 'https://restaurant-reservation-brown-psi.vercel.app/'
-    },
-    {
-      id: 'agri-farm-management',
-      title: 'Agri-Farm Management System',
-      badge: 'React + Node + MongoDB Atlas',
-      category: 'Agricultural Tech Platform',
-      icon: <Sprout className="w-6 h-6 text-emerald-400" />,
-      accent: 'from-emerald-400 via-teal-500 to-cyan-500',
-      glow: 'shadow-[0_0_30px_rgba(16,185,129,0.35)]',
-      shortDesc: 'Full-stack agricultural management platform with secure user authentication, streamlining crop tracking and marketplace inventory workflows by 40%.',
-      fullDesc: 'Developed a full-stack agricultural management platform with secure user authentication, streamlining crop tracking and marketplace inventory workflows by 40%. Hosted on MongoDB Atlas.',
-      techStack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'MongoDB Atlas', 'REST API'],
-      features: [
-        'Streamlined crop tracking and farm inventory management workflows by 40%',
-        'Secure user authentication and role-based marketplace access',
-        'Cloud database integration using MongoDB Atlas for high availability',
-        'Interactive dashboard for monitoring crop health cycles & produce listings',
-        'RESTful API architecture built with Node.js & Express.js'
-      ],
-      githubUrl: 'https://github.com/Premkumarattem/agri-farm.git',
-      demoUrl: 'https://github.com/Premkumarattem/agri-farm.git'
     }
   ];
 
   const handleOpenDemo = (project) => {
-    confetti({ particleCount: 60, spread: 70 });
+    confetti({ particleCount: 50, spread: 60, origin: { y: 0.7 } });
     setActiveProjectModal(project);
   };
 
@@ -81,91 +63,104 @@ export default function ProjectsSection() {
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Section Header */}
         <div className="flex flex-col items-center text-center space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-mono">
-            <Layers className="w-3.5 h-3.5" /> 04 — FEATURED PROJECTS
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-950/50 border border-red-500/30 text-red-400 text-xs font-mono">
+            <Layers className="w-3.5 h-3.5" /> 04 &bull; FEATURED PROJECTS (RESUME)
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white">
-            Engineering Solutions & <span className="gradient-text">Live Work</span>
+            Core Production <span className="gradient-red-white">Engineering Works</span>
           </h2>
-          <p className="text-slate-400 text-sm max-w-xl font-mono">
-            Production-deployed web applications, real-time AI platforms, and full-stack software solutions.
+          <p className="text-zinc-400 text-sm max-w-xl font-mono">
+            Two key live-deployed software platforms featured in my official resume.
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full"></div>
+          <div className="w-20 h-1 bg-red-600 rounded-full shadow-[0_0_15px_rgba(239,68,68,0.8)]"></div>
         </div>
 
-        {/* Projects Cards Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {projects.map((project) => (
+        {/* 2-Column Projects Cards Grid */}
+        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {projects.map((project, idx) => (
             <div
               key={project.id}
-              className={`glass-panel rounded-2xl p-6 glass-panel-hover flex flex-col justify-between relative overflow-hidden group ${project.glow}`}
+              className={`glass-panel rounded-3xl p-7 flex flex-col justify-between relative overflow-hidden group border border-white/10 hover:border-red-500/60 ${project.glow}`}
             >
-              {/* Top Gradient Header */}
+              {/* Top Accent Gradient Line */}
               <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${project.accent}`}></div>
 
-              <div className="space-y-5">
+              <div className="space-y-6">
                 {/* Header Row */}
                 <div className="flex items-center justify-between">
-                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800">
-                    {project.icon}
+                  <div className="flex items-center gap-3">
+                    <div className="p-3 rounded-2xl bg-[#121218] border border-red-500/30 group-hover:scale-110 transition-transform">
+                      {project.icon}
+                    </div>
+                    <div>
+                      <span className="text-[11px] font-mono text-red-400 uppercase tracking-wider block font-semibold">
+                        {project.category}
+                      </span>
+                      <h3 className="text-2xl font-bold text-white group-hover:text-red-400 transition-colors">
+                        {project.title}
+                      </h3>
+                    </div>
                   </div>
-                  <span className="px-3 py-1 rounded-full text-[11px] font-mono font-bold bg-cyan-950/80 border border-cyan-500/30 text-cyan-300">
-                    {project.badge}
+                  <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-red-950/80 border border-red-500/30 text-red-300">
+                    Project 0{idx + 1}
                   </span>
                 </div>
 
-                {/* Title & Desc */}
-                <div className="space-y-2">
-                  <span className="text-[11px] font-mono text-purple-400 uppercase tracking-wider">{project.category}</span>
-                  <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-xs text-slate-300 leading-relaxed font-sans">
-                    {project.shortDesc}
-                  </p>
-                </div>
+                <p className="text-xs text-zinc-400 font-mono italic">
+                  {project.subtitle}
+                </p>
+
+                {/* Description */}
+                <p className="text-sm text-zinc-300 leading-relaxed font-sans">
+                  {project.shortDesc}
+                </p>
 
                 {/* Tech Tags */}
-                <div className="flex flex-wrap gap-1.5 pt-2">
-                  {project.techStack.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-2.5 py-0.5 rounded text-[10px] font-mono bg-slate-900 border border-slate-800 text-cyan-400"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                <div className="space-y-2 pt-2">
+                  <span className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider block">
+                    Technologies:
+                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {project.techStack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2.5 py-1 rounded-md text-xs font-mono bg-[#14141c] border border-zinc-800 text-zinc-300 group-hover:border-red-500/30"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
 
-              {/* Action Footer */}
-              <div className="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between gap-2">
+              {/* Action Buttons Row */}
+              <div className="pt-8 mt-6 border-t border-zinc-800 flex items-center justify-between gap-3 flex-wrap">
                 <a
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 hover:text-white transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono text-white bg-[#14141c] border border-zinc-700 hover:border-red-500 hover:bg-white/5 transition-all btn-click-effect"
                 >
-                  <Github className="w-4 h-4" /> Code
+                  <Github className="w-4 h-4 text-red-400" /> GitHub Repo
                 </a>
 
-                {project.demoUrl !== '#' && (
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => handleOpenDemo(project)}
+                    className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-mono text-zinc-300 bg-transparent hover:text-white hover:bg-white/5 transition-all btn-click-effect"
+                  >
+                    Details <ArrowUpRight className="w-3.5 h-3.5" />
+                  </button>
+
                   <a
                     href={project.demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-xs font-mono text-cyan-400 hover:text-cyan-300 transition-colors"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono font-bold bg-red-600 text-white hover:bg-red-500 transition-all shadow-[0_0_15px_rgba(239,68,68,0.5)] btn-click-effect"
                   >
                     <Globe className="w-3.5 h-3.5" /> Live Demo
                   </a>
-                )}
-
-                <button
-                  onClick={() => handleOpenDemo(project)}
-                  className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-cyan-950 border border-cyan-500/40 text-cyan-300 hover:bg-cyan-500 hover:text-black transition-all"
-                >
-                  Details <ArrowUpRight className="w-3.5 h-3.5" />
-                </button>
+                </div>
               </div>
             </div>
           ))}
@@ -174,36 +169,38 @@ export default function ProjectsSection() {
 
       {/* Detailed Project Modal */}
       {activeProjectModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fadeIn">
-          <div className="relative w-full max-w-2xl bg-[#0b0f19] border border-cyan-500/40 rounded-2xl p-6 shadow-[0_0_50px_rgba(0,242,254,0.3)] space-y-6 max-h-[90vh] overflow-y-auto">
-            <div className="flex items-center justify-between border-b border-slate-800 pb-4">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fadeIn">
+          <div className="relative w-full max-w-2xl bg-[#0c0c10] border border-red-500/40 rounded-3xl p-7 shadow-[0_0_60px_rgba(239,68,68,0.3)] space-y-6 max-h-[90vh] overflow-y-auto">
+            <div className="flex items-center justify-between border-b border-zinc-800 pb-4">
               <div className="flex items-center gap-3">
-                <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800">
+                <div className="p-2.5 rounded-2xl bg-[#14141c] border border-red-500/30">
                   {activeProjectModal.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white font-mono">{activeProjectModal.title}</h3>
-                  <span className="text-xs text-cyan-400 font-mono">{activeProjectModal.badge}</span>
+                  <h3 className="text-2xl font-bold text-white font-sans">{activeProjectModal.title}</h3>
+                  <span className="text-xs text-red-400 font-mono">{activeProjectModal.category}</span>
                 </div>
               </div>
               <button
                 onClick={() => setActiveProjectModal(null)}
-                className="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800"
+                className="p-2 rounded-xl text-zinc-400 hover:text-white hover:bg-zinc-800"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
-            <p className="text-sm text-slate-300 leading-relaxed font-sans">
+            <p className="text-sm text-zinc-300 leading-relaxed font-sans">
               {activeProjectModal.fullDesc}
             </p>
 
             <div className="space-y-3">
-              <h4 className="font-mono text-xs font-bold text-cyan-400 uppercase tracking-wider">Key Project Achievements & Features</h4>
+              <h4 className="font-mono text-xs font-bold text-red-400 uppercase tracking-wider">
+                Key Architectural Highlights
+              </h4>
               <div className="space-y-2">
                 {activeProjectModal.features.map((feature, i) => (
-                  <div key={i} className="flex items-start gap-2 text-xs text-slate-300">
-                    <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                  <div key={i} className="flex items-start gap-2.5 text-xs text-zinc-300">
+                    <CheckCircle2 className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                     <span>{feature}</span>
                   </div>
                 ))}
@@ -211,20 +208,22 @@ export default function ProjectsSection() {
             </div>
 
             <div className="space-y-2">
-              <h4 className="font-mono text-xs font-bold text-purple-400 uppercase tracking-wider">Technologies Used</h4>
+              <h4 className="font-mono text-xs font-bold text-white uppercase tracking-wider">
+                Technologies Stack
+              </h4>
               <div className="flex flex-wrap gap-2">
                 {activeProjectModal.techStack.map((tech) => (
-                  <span key={tech} className="px-3 py-1 rounded-full text-xs font-mono bg-slate-900 border border-cyan-500/30 text-cyan-300">
+                  <span key={tech} className="px-3 py-1 rounded-md text-xs font-mono bg-[#14141c] border border-red-500/30 text-white">
                     {tech}
                   </span>
                 ))}
               </div>
             </div>
 
-            <div className="pt-4 border-t border-slate-800 flex justify-end gap-3 flex-wrap">
+            <div className="pt-4 border-t border-zinc-800 flex justify-end gap-3 flex-wrap">
               <button
                 onClick={() => setActiveProjectModal(null)}
-                className="px-4 py-2 rounded-lg text-xs font-mono text-slate-400 hover:text-white"
+                className="px-4 py-2 rounded-xl text-xs font-mono text-zinc-400 hover:text-white"
               >
                 Close
               </button>
@@ -232,20 +231,18 @@ export default function ProjectsSection() {
                 href={activeProjectModal.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-mono font-bold bg-slate-900 border border-cyan-500/40 text-cyan-300 hover:bg-cyan-950 transition-all"
+                className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono font-bold bg-[#14141c] border border-zinc-700 text-white hover:border-red-500 transition-all btn-click-effect"
               >
-                <Github className="w-4 h-4" /> GitHub Code
+                <Github className="w-4 h-4 text-red-400" /> GitHub Repo
               </a>
-              {activeProjectModal.demoUrl !== '#' && (
-                <a
-                  href={activeProjectModal.demoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-mono font-bold bg-gradient-to-r from-cyan-500 to-blue-600 text-black hover:opacity-90 transition-all"
-                >
-                  <Globe className="w-4 h-4" /> Launch Live App
-                </a>
-              )}
+              <a
+                href={activeProjectModal.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-5 py-2 rounded-xl text-xs font-mono font-bold bg-red-600 text-white hover:bg-red-500 transition-all shadow-[0_0_20px_rgba(239,68,68,0.5)] btn-click-effect"
+              >
+                <Globe className="w-4 h-4" /> Open Live Application
+              </a>
             </div>
           </div>
         </div>

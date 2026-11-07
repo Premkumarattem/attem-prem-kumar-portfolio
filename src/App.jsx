@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ThreeWorkspace from './components/ThreeWorkspace';
+import AmbientBackground from './components/AmbientBackground';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
@@ -17,9 +17,9 @@ export default function App() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#05070f] text-slate-100 relative font-sans selection:bg-cyan-500 selection:text-black">
-      {/* Smooth 3D Interactive Background */}
-      <ThreeWorkspace />
+    <div className="min-h-screen bg-[#060608] text-zinc-100 relative font-sans selection:bg-red-600 selection:text-white">
+      {/* Lightweight 2D Ambient Particle & Glow Background (No 3D) */}
+      <AmbientBackground />
 
       {/* Navigation Header */}
       <Navbar onOpenResumeModal={() => setIsResumeModalOpen(true)} />
@@ -35,10 +35,10 @@ export default function App() {
         {/* 03 - Tech Stack */}
         <TechStackSection />
 
-        {/* 04 - Featured Projects */}
+        {/* 04 - Featured Projects (Exactly 2 projects from resume) */}
         <ProjectsSection />
 
-        {/* 05 - Experience */}
+        {/* 05 - Experience (JP IT Staffing LLC) */}
         <ExperienceSection />
 
         {/* 06 - Education & Certifications */}

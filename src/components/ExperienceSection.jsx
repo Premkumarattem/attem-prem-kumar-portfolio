@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, Building2, Calendar, MapPin, CheckCircle, ArrowRight, Award, Zap } from 'lucide-react';
+import { Briefcase, Building2, Calendar, MapPin, CheckCircle, ArrowRight, Award, Zap, Shield, Database } from 'lucide-react';
 
 export default function ExperienceSection() {
   return (
@@ -7,99 +7,81 @@ export default function ExperienceSection() {
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Section Header */}
         <div className="flex flex-col items-center text-center space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-mono">
-            <Briefcase className="w-3.5 h-3.5" /> 05 — INDUSTRIAL EXPERIENCE
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/50 border border-red-500/30 text-red-400 text-xs font-mono">
+            <Briefcase className="w-3.5 h-3.5" /> 05 &bull; WORK EXPERIENCE
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white">
-            Practical Industry <span className="gradient-text">Exposure</span>
+            Industry Experience & <span className="gradient-red-white">Engineering Roles</span>
           </h2>
-          <p className="text-slate-400 text-sm max-w-xl font-mono">
-            6 Months of hands-on industrial internship experience at Rane Madras Industries.
+          <p className="text-zinc-400 text-sm max-w-xl font-mono">
+            Active professional role as stated in my official resume.
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full"></div>
+          <div className="w-20 h-1 bg-red-600 rounded-full shadow-[0_0_15px_rgba(239,68,68,0.8)]"></div>
         </div>
 
-        {/* Timeline Experience Card */}
+        {/* Experience Card */}
         <div className="max-w-4xl mx-auto">
-          <div className="glass-panel rounded-3xl p-8 sm:p-10 relative overflow-hidden glass-panel-hover border-cyan-500/30 shadow-[0_0_40px_rgba(0,242,254,0.15)]">
-            {/* Glowing Corner Badge */}
-            <div className="absolute top-0 right-0 px-6 py-2 rounded-bl-2xl bg-gradient-to-l from-cyan-500 to-blue-600 text-black font-mono font-bold text-xs shadow-lg">
-              6 MONTHS INDUSTRIAL INTERNSHIP
+          <div className="glass-panel rounded-3xl p-8 sm:p-10 relative overflow-hidden border border-red-500/30 shadow-[0_0_40px_rgba(239,68,68,0.15)]">
+            {/* Top Badge */}
+            <div className="absolute top-0 right-0 px-6 py-2 rounded-bl-2xl bg-red-600 text-white font-mono font-bold text-xs shadow-lg">
+              ACTIVE ROLE &bull; SEPT 2026 – PRESENT
             </div>
 
             <div className="space-y-6">
               {/* Header Info */}
               <div className="space-y-2">
-                <div className="flex items-center gap-2 text-cyan-400 font-mono text-sm">
-                  <Building2 className="w-4 h-4" />
-                  <span className="font-bold tracking-wide">Rane Madras Industries</span>
+                <div className="flex items-center gap-2 text-red-400 font-mono text-sm font-semibold">
+                  <Building2 className="w-4 h-4 text-red-500" />
+                  <span className="tracking-wide text-white">JP IT Staffing LLC</span>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
-                  Software & Industrial Operations Intern
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-sans">
+                  API Web Developer Intern
                 </h3>
-                <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400 pt-1">
-                  <span className="flex items-center gap-1.5 text-purple-300">
-                    <Calendar className="w-4 h-4 text-purple-400" /> Duration: 6 Months
+                <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-zinc-400 pt-1">
+                  <span className="flex items-center gap-1.5 text-red-400 font-bold">
+                    <Calendar className="w-4 h-4 text-red-500" /> Sept 2026 – Present
                   </span>
-                  <span className="flex items-center gap-1.5 text-slate-300">
-                    <MapPin className="w-4 h-4 text-cyan-400" /> Industrial Sector, India
+                  <span className="flex items-center gap-1.5 text-zinc-300">
+                    <MapPin className="w-4 h-4 text-red-400" /> Professional Internship
                   </span>
                 </div>
               </div>
 
-              <div className="w-full h-px bg-slate-800"></div>
+              <div className="w-full h-px bg-zinc-800"></div>
 
-              {/* Responsibilities & Achievements */}
+              {/* Responsibilities & Achievements from Resume */}
               <div className="space-y-4">
-                <h4 className="font-mono text-xs font-bold text-cyan-400 uppercase tracking-wider flex items-center gap-2">
-                  <Zap className="w-4 h-4 text-amber-400" /> Key Internship Responsibilities & Impact
+                <h4 className="font-mono text-xs font-bold text-red-400 uppercase tracking-wider flex items-center gap-2">
+                  <Zap className="w-4 h-4 text-red-500" /> Key Responsibilities & Contributions
                 </h4>
 
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
+                  <div className="p-4 rounded-xl bg-[#121218] border border-zinc-800 hover:border-red-500/40 transition-all space-y-2">
                     <div className="flex items-center gap-2 text-white font-bold text-sm font-mono">
-                      <CheckCircle className="w-4 h-4 text-cyan-400" /> Workflow Automation
+                      <CheckCircle className="w-4 h-4 text-red-500" /> RESTful API Engineering
                     </div>
-                    <p className="text-xs text-slate-300 leading-relaxed font-sans">
-                      Assisted in developing automated software tools and scripts to collect operational data and streamline production reporting.
+                    <p className="text-xs text-zinc-300 leading-relaxed font-sans">
+                      Develop, integrate, maintain and document RESTful APIs, with a rigorous focus on security, performance and clean coding standards.
                     </p>
                   </div>
 
-                  <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
+                  <div className="p-4 rounded-xl bg-[#121218] border border-zinc-800 hover:border-red-500/40 transition-all space-y-2">
                     <div className="flex items-center gap-2 text-white font-bold text-sm font-mono">
-                      <CheckCircle className="w-4 h-4 text-purple-400" /> Code Optimization
+                      <CheckCircle className="w-4 h-4 text-red-500" /> Teamwork & Milestones
                     </div>
-                    <p className="text-xs text-slate-300 leading-relaxed font-sans">
-                      Analyzed system logs and diagnostic outputs to identify software bottlenecks and optimize internal execution times.
-                    </p>
-                  </div>
-
-                  <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
-                    <div className="flex items-center gap-2 text-white font-bold text-sm font-mono">
-                      <CheckCircle className="w-4 h-4 text-blue-400" /> Cross-Functional Teamwork
-                    </div>
-                    <p className="text-xs text-slate-300 leading-relaxed font-sans">
-                      Collaborated closely with industrial engineers, data analysts, and IT support teams to ensure software reliability.
-                    </p>
-                  </div>
-
-                  <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
-                    <div className="flex items-center gap-2 text-white font-bold text-sm font-mono">
-                      <CheckCircle className="w-4 h-4 text-emerald-400" /> Industrial Best Practices
-                    </div>
-                    <p className="text-xs text-slate-300 leading-relaxed font-sans">
-                      Gained strict operational discipline in version control, software testing, and documentation standards in an enterprise setting.
+                    <p className="text-xs text-zinc-300 leading-relaxed font-sans">
+                      Work with cross-functional development teams, manage databases, write clean code and debug issues to meet project milestones.
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Technologies Applied */}
-              <div className="pt-4 border-t border-slate-800 flex items-center justify-between flex-wrap gap-3">
-                <span className="text-xs font-mono text-slate-400">Tools & Technologies Applied:</span>
+              {/* Core Technologies Used */}
+              <div className="pt-4 border-t border-zinc-800 flex items-center justify-between flex-wrap gap-3">
+                <span className="text-xs font-mono text-zinc-400">Core Technologies Applied:</span>
                 <div className="flex flex-wrap gap-2">
-                  {['Python', 'Java', 'SQL Databases', 'Data Analytics', 'Software Testing'].map(t => (
-                    <span key={t} className="px-3 py-1 rounded-full text-xs font-mono bg-cyan-950/80 border border-cyan-500/30 text-cyan-300">
+                  {['REST APIs', 'Node.js', 'Express.js', 'Python (FastAPI)', 'Database Management', 'API Security'].map((t) => (
+                    <span key={t} className="px-3 py-1 rounded-md text-xs font-mono bg-[#14141c] border border-red-500/30 text-white">
                       {t}
                     </span>
                   ))}

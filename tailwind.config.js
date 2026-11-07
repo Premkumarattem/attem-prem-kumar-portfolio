@@ -7,33 +7,30 @@ export default {
   theme: {
     extend: {
       colors: {
-        darkBg: "#05070f",
-        cardBg: "rgba(15, 23, 42, 0.75)",
-        cardBorder: "rgba(56, 189, 248, 0.2)",
-        neonCyan: "#00f2fe",
-        neonBlue: "#4facfe",
-        neonPurple: "#7f00ff",
-        accentGlow: "#38bdf8"
+        darkBg: "#060608",
+        cardBg: "rgba(18, 18, 24, 0.85)",
+        crimson: "#ef4444",
+        brandRed: "#ff1e38",
+        darkRed: "#991b1b",
+        accentRed: "#ff334b",
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['Fira Code', 'JetBrains Mono', 'monospace'],
       },
       boxShadow: {
-        'cyan-glow': '0 0 25px -5px rgba(0, 242, 254, 0.4)',
-        'purple-glow': '0 0 25px -5px rgba(127, 0, 255, 0.4)',
-        'blue-glow': '0 0 25px -5px rgba(79, 172, 254, 0.4)',
-        'card-glow': '0 10px 30px -10px rgba(0, 242, 254, 0.15)',
+        'red-glow': '0 0 25px -3px rgba(239, 68, 68, 0.45)',
+        'red-glow-lg': '0 0 45px -5px rgba(255, 30, 56, 0.4)',
+        'card-glow': '0 10px 30px -10px rgba(0, 0, 0, 0.8)',
       },
       animation: {
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'float': 'float 6s ease-in-out infinite',
-        'spin-slow': 'spin 12s linear infinite',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-12px)' },
+          '50%': { transform: 'translateY(-8px)' },
         }
       }
     },
