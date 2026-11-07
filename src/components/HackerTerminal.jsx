@@ -39,7 +39,7 @@ export default function HackerTerminal() {
         'Role: Software Engineer | Full-Stack Developer | AI & Real-Time Systems',
         'Degree: B.Tech Computer Science & Engineering (CSE)',
         'Internship: 6 Months Industrial Internship @ Rane Madras Industries',
-        'Hackathon Honor: Capgemini X Synchrony Tech 4 Future Finalist',
+        'Hackathon Honor: Capgemini Tech4Positive Futures Challenge Semi-Finalist',
         'Certifications: Sketch Brains Data Analytics, Code Unnati / SAP'
       ];
     } else if (cleanCmd === 'projects' || cleanCmd === 'ls projects') {

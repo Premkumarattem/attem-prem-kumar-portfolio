@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Sparkles, ArrowRight, Download, Terminal, Mail, Phone, MapPin, Copy, Check, ExternalLink, Code2, Linkedin, Github } from 'lucide-react';
+import { Sparkles, ArrowRight, Download, Terminal, Mail, Phone, MapPin, Copy, Check, ExternalLink, Code2, Linkedin, Github, FileText } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 export default function HeroSection({ onOpenResumeModal }) {
@@ -69,7 +69,7 @@ export default function HeroSection({ onOpenResumeModal }) {
           {/* Main Headline */}
           <div className="space-y-2">
             <p className="text-xs font-mono uppercase tracking-[0.25em] text-red-500 font-bold">
-              // FULL-STACK DEVELOPER &bull; DATA ANALYTICS PORTFOLIO
+              Full-Stack Developer &bull; Data Analytics
             </p>
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white font-sans leading-none">
               ATTEM <br className="hidden sm:block" />
@@ -140,9 +140,13 @@ export default function HeroSection({ onOpenResumeModal }) {
           {/* Key Tech Badges */}
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-2">
             {[
-              'Python (FastAPI)',
+              'JavaScript',
               'React.js',
               'Node.js',
+              'Python (FastAPI)',
+              'REST APIs',
+              'PostgreSQL',
+              'MongoDB',
               'Power BI',
               'SQL',
               'AWS Cloud',
@@ -158,23 +162,31 @@ export default function HeroSection({ onOpenResumeModal }) {
             ))}
           </div>
 
-          {/* Action CTAs with Shimmer Animation */}
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+          {/* Action CTAs: View Projects, Resume, and Hire Me */}
+          <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-3">
             <a
               href="#projects"
-              className="w-full sm:w-auto flex items-center justify-center gap-3 px-7 py-3.5 rounded-xl font-mono font-bold text-sm bg-red-600 text-white shadow-[0_0_30px_rgba(239,68,68,0.45)] hover:bg-red-500 hover:shadow-[0_0_40px_rgba(239,68,68,0.65)] hover:scale-105 transition-all btn-click-effect shimmer-btn"
+              className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-mono font-bold text-sm bg-red-600 text-white shadow-[0_0_25px_rgba(239,68,68,0.45)] hover:bg-red-500 hover:shadow-[0_0_35px_rgba(239,68,68,0.65)] hover:scale-105 transition-all btn-click-effect shimmer-btn"
             >
-              Explore 2 Featured Projects
-              <ArrowRight className="w-4 h-4" />
+              <Code2 className="w-4 h-4" />
+              View Projects
             </a>
 
             <button
               onClick={onOpenResumeModal}
-              className="w-full sm:w-auto flex items-center justify-center gap-3 px-7 py-3.5 rounded-xl font-mono font-semibold text-sm bg-[#121218] border border-red-500/40 text-white hover:bg-red-600/10 hover:border-red-500 transition-all shadow-md btn-click-effect"
+              className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-mono font-semibold text-sm bg-[#121218] border border-red-500/40 text-white hover:bg-red-600/10 hover:border-red-500 transition-all shadow-md btn-click-effect hover:scale-105"
             >
-              <Download className="w-4 h-4 text-red-400" />
-              Download Resume
+              <FileText className="w-4 h-4 text-red-400" />
+              Resume
             </button>
+
+            <a
+              href="#contact"
+              className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-mono font-semibold text-sm bg-[#121218] border border-zinc-700 text-zinc-200 hover:text-white hover:border-red-500 hover:bg-red-600/10 transition-all shadow-md btn-click-effect hover:scale-105"
+            >
+              <Mail className="w-4 h-4 text-red-400" />
+              Hire Me
+            </a>
           </div>
         </div>
 
@@ -207,19 +219,19 @@ export default function HeroSection({ onOpenResumeModal }) {
                 </div>
               </div>
 
-              {/* Bottom Card Highlights */}
-              <div className="mt-4 grid grid-cols-3 gap-2 text-center">
-                <div className="p-2.5 rounded-xl bg-[#121218] border border-white/5 hover:border-red-500/40 transition-all">
-                  <p className="text-[9px] text-zinc-400 uppercase font-mono">Current</p>
-                  <p className="font-mono text-xs font-bold text-white">JP IT Staffing</p>
+              {/* Bottom Card Highlights: high contrast, readable labels & exact resume claims */}
+              <div className="mt-4 grid grid-cols-3 gap-2.5 text-center">
+                <div className="p-3 rounded-xl bg-[#14141e] border border-zinc-700 hover:border-red-500/50 transition-all shadow-md">
+                  <p className="text-xs font-mono font-bold text-zinc-200 uppercase tracking-wider">CURRENT</p>
+                  <p className="font-mono text-xs sm:text-sm font-bold text-white mt-1">JP IT Staffing</p>
                 </div>
-                <div className="p-2.5 rounded-xl bg-[#121218] border border-white/5 hover:border-red-500/40 transition-all">
-                  <p className="text-[9px] text-zinc-400 uppercase font-mono">Hackathon</p>
-                  <p className="font-mono text-xs font-bold text-red-400">Capgemini Top</p>
+                <div className="p-3 rounded-xl bg-[#14141e] border border-zinc-700 hover:border-red-500/50 transition-all shadow-md">
+                  <p className="text-xs font-mono font-bold text-zinc-200 uppercase tracking-wider">HACKATHON</p>
+                  <p className="font-mono text-xs sm:text-sm font-bold text-red-400 mt-1">Capgemini Semi-Finalist</p>
                 </div>
-                <div className="p-2.5 rounded-xl bg-[#121218] border border-white/5 hover:border-red-500/40 transition-all">
-                  <p className="text-[9px] text-zinc-400 uppercase font-mono">Analytics</p>
-                  <p className="font-mono text-xs font-bold text-white">SketchBrains</p>
+                <div className="p-3 rounded-xl bg-[#14141e] border border-zinc-700 hover:border-red-500/50 transition-all shadow-md">
+                  <p className="text-xs font-mono font-bold text-zinc-200 uppercase tracking-wider">ANALYTICS</p>
+                  <p className="font-mono text-xs sm:text-sm font-bold text-white mt-1">SketchBrains</p>
                 </div>
               </div>
             </div>

@@ -18,6 +18,8 @@ export default function TechStackSection() {
 
     // Full-Stack and Web
     { name: 'Python (FastAPI)', category: 'Full-Stack & Web', level: 'Advanced', icon: '⚡', desc: 'High-performance asynchronous REST APIs, WebSockets & WebRTC' },
+    { name: 'JavaScript & REST APIs', category: 'Full-Stack & Web', level: 'Advanced', icon: '⚡', desc: 'Modern ES6+, async/await, secure RESTful endpoints & WebSockets' },
+    { name: 'PostgreSQL & MongoDB', category: 'Full-Stack & Web', level: 'Advanced', icon: '🗄️', desc: 'Relational SQL & NoSQL schema design, ACID queries & MongoDB Atlas' },
     { name: 'React.js', category: 'Full-Stack & Web', level: 'Advanced', icon: '⚛️', desc: 'Component architecture, custom hooks, reactive state & Tailwind CSS' },
     { name: 'Node.js & Express.js', category: 'Full-Stack & Web', level: 'Advanced', icon: '🟢', desc: 'Scalable backend server development, middleware & REST APIs' },
     { name: 'JavaScript & MERN', category: 'Full-Stack & Web', level: 'Advanced', icon: '📜', desc: 'Modern ES6+, async/await, full-stack MERN ecosystem development' },
