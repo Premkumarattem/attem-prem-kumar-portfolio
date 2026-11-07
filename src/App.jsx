@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import AmbientBackground from './components/AmbientBackground';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
@@ -17,10 +16,7 @@ export default function App() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#060608] text-zinc-100 relative font-sans selection:bg-red-600 selection:text-white">
-      {/* Lightweight 2D Ambient Particle & Glow Background (No 3D) */}
-      <AmbientBackground />
-
+    <div className="min-h-screen bg-black text-zinc-100 relative font-sans selection:bg-red-600 selection:text-white">
       {/* Navigation Header */}
       <Navbar onOpenResumeModal={() => setIsResumeModalOpen(true)} />
 

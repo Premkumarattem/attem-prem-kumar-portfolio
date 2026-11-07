@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    background-color: #060608;
+    background-color: #000000;
     color: #f4f4f5;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
@@ -17,11 +17,11 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #060608;
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(239, 68, 68, 0.35);
+  background: rgba(239, 68, 68, 0.4);
   border-radius: 4px;
 }
 
@@ -32,11 +32,9 @@
 
 /* Black-Red Glassmorphism Cards */
 .glass-panel {
-  background: rgba(14, 14, 18, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: #0d0d10;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.9);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
