@@ -20,7 +20,7 @@ export default function Footer() {
               <span className="w-1.5 h-1.5 rounded-full bg-red-500"></span>
             </p>
             <p className="text-[11px] text-zinc-400 font-mono">
-              API Web Developer &bull; Full-Stack &bull; Data Analytics
+              Full-Stack Developer &bull; Data Analytics Portfolio
             </p>
           </div>
         </div>

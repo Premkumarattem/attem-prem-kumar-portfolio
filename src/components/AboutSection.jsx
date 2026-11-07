@@ -26,7 +26,7 @@ export default function AboutSection() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-white font-mono">About Attem Prem Kumar</h3>
-                <p className="text-xs text-red-400 font-mono">API Web Developer &bull; Full-Stack &bull; Data Analytics</p>
+                <p className="text-xs text-red-400 font-mono">Full-Stack Developer &bull; Data Analytics</p>
               </div>
             </div>
 

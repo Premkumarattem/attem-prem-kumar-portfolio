@@ -4,10 +4,10 @@ import confetti from 'canvas-confetti';
 
 export default function HeroSection({ onOpenResumeModal }) {
   const roles = [
+    'Full-Stack Developer',
+    'Data Analytics Specialist',
     'API Web Developer Intern',
-    'Full-Stack Web Developer',
-    'Data Analytics & BI Enthusiast',
-    'AI & Generative AI Builder'
+    'AI Web & Dashboard Builder'
   ];
 
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
@@ -69,7 +69,7 @@ export default function HeroSection({ onOpenResumeModal }) {
           {/* Main Headline */}
           <div className="space-y-2">
             <p className="text-xs font-mono uppercase tracking-[0.25em] text-red-500 font-bold">
-              // SOFTWARE ENGINEER &bull; DATA ANALYTICS
+              // FULL-STACK DEVELOPER &bull; DATA ANALYTICS PORTFOLIO
             </p>
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white font-sans leading-none">
               ATTEM <br className="hidden sm:block" />

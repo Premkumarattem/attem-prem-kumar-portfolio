@@ -61,7 +61,7 @@ export default function Navbar({ onOpenResumeModal }) {
               <span className="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
             </span>
             <span className="text-[11px] text-zinc-400 font-mono tracking-tight flex items-center gap-1">
-              API Web Developer <span className="text-red-500">&bull;</span> Full-Stack
+              Full-Stack Developer <span className="text-red-500">&bull;</span> Data Analytics
             </span>
           </div>
         </a>
