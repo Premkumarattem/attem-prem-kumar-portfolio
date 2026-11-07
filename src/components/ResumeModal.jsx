@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Download, Copy, Check, FileText, CheckCircle, Briefcase, GraduationCap, Award, Globe, Phone, Mail, MapPin } from 'lucide-react';
+import { X, Download, Copy, Check, FileText, CheckCircle, Briefcase, GraduationCap, Award, Globe, Phone, Mail, MapPin, Linkedin } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 export default function ResumeModal({ isOpen, onClose }) {
@@ -10,7 +10,7 @@ export default function ResumeModal({ isOpen, onClose }) {
   const resumeText = `========================================================================
 ATTEM PREM KUMAR
 Telangana, India | +91 6302871761 | premkumaryadavat71@gmail.com
-LinkedIn: https://linkedin.com/in/attem-prem-kumar
+LinkedIn: https://www.linkedin.com/in/premkumarattem/
 GitHub: https://github.com/Premkumarattem
 ========================================================================
 
@@ -58,11 +58,9 @@ ACHIEVEMENTS
       origin: { y: 0.6 }
     });
 
-    const blob = new Blob([resumeText], { type: 'text/plain;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
-    link.href = url;
-    link.download = 'ATTEM_PREM_KUMAR_RESUME.txt';
+    link.href = '/Prem_Kumar_Attem_Resume.pdf';
+    link.download = 'Prem_Kumar_Attem_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -109,8 +107,15 @@ ACHIEVEMENTS
               <p className="font-semibold text-red-400">API Web Developer Intern @ JP IT Staffing</p>
             </div>
             <div>
-              <p className="text-[10px] text-zinc-400 uppercase font-mono">Hackathon Honor</p>
-              <p className="font-semibold text-white">Capgemini Semi-Finalist</p>
+              <p className="text-[10px] text-zinc-400 uppercase font-mono">LinkedIn Profile</p>
+              <a
+                href="https://www.linkedin.com/in/premkumarattem/"
+                target="_blank"
+                rel="noreferrer"
+                className="font-semibold text-red-400 hover:underline flex items-center gap-1"
+              >
+                premkumarattem <Globe className="w-3.5 h-3.5" />
+              </a>
             </div>
           </div>
 
@@ -150,7 +155,9 @@ ACHIEVEMENTS
               <div className="p-3 rounded-xl bg-[#121218] border border-zinc-800 space-y-1">
                 <div className="flex justify-between items-center">
                   <p className="font-bold text-white text-xs">1. EduAccess</p>
-                  <span className="text-[10px] font-mono text-red-400">Live App</span>
+                  <a href="https://smart-classroom-assistant-qmps.onrender.com/" target="_blank" rel="noreferrer" className="text-[10px] font-mono text-red-400 hover:underline">
+                    Live Demo &rarr;
+                  </a>
                 </div>
                 <p className="text-[11px] text-zinc-400 font-mono">Python &bull; FastAPI &bull; WebSockets &bull; Groq AI &bull; Render</p>
                 <p className="text-xs text-zinc-300">Live multilingual speech-to-text, 3-language translation and AI lecture summarization.</p>
@@ -159,7 +166,9 @@ ACHIEVEMENTS
               <div className="p-3 rounded-xl bg-[#121218] border border-zinc-800 space-y-1">
                 <div className="flex justify-between items-center">
                   <p className="font-bold text-white text-xs">2. Restaurant Reservation</p>
-                  <span className="text-[10px] font-mono text-red-400">Live App</span>
+                  <a href="https://restaurant-reservation-brown-psi.vercel.app/" target="_blank" rel="noreferrer" className="text-[10px] font-mono text-red-400 hover:underline">
+                    Live Demo &rarr;
+                  </a>
                 </div>
                 <p className="text-[11px] text-zinc-400 font-mono">React &bull; Node &bull; MongoDB &bull; JWT &bull; Razorpay</p>
                 <p className="text-xs text-zinc-300">Full-stack reservation platform reducing customer table booking time by 60%.</p>

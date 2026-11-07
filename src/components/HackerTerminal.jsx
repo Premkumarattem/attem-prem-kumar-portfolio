@@ -44,22 +44,20 @@ export default function HackerTerminal() {
       ];
     } else if (cleanCmd === 'projects' || cleanCmd === 'ls projects') {
       newOutput = [
-        '--- LIVE PROJECTS REPOSITORY ---',
-        '[1] Smart Classroom Assistant',
+        '--- LIVE PROJECTS REPOSITORY (FEATURED) ---',
+        '[1] Smart Classroom Assistant (EduAccess)',
         '    Tech: Python | FastAPI | WebSockets | WebRTC | PostgreSQL | Groq API | Render',
         '    Live: https://smart-classroom-assistant-qmps.onrender.com/',
         '[2] Restaurant Reservation System',
         '    Tech: React.js | Node.js | Express.js | MongoDB | JWT | Razorpay | Vercel',
-        '    Live: https://restaurant-reservation-brown-psi.vercel.app/',
-        '[3] Agri-Farm Management System',
-        '    Tech: React.js | Node.js | Express.js | MongoDB | MongoDB Atlas'
+        '    Live: https://restaurant-reservation-brown-psi.vercel.app/'
       ];
     } else if (cleanCmd === 'skills' || cleanCmd === 'fetch skills') {
       newOutput = [
         '--- TECHNICAL SKILLS MATRIX ---',
         'Languages: Python, Java, C, JavaScript, SQL',
         'Real-Time AI: FastAPI, WebSockets, WebRTC, Groq API, Speech-to-Text',
-        'Frontend: React.js, Tailwind CSS, Three.js, HTML5/CSS3',
+        'Frontend: React.js, Tailwind CSS, HTML5, CSS3',
         'Backend & DB: Node.js, Express, MongoDB, MongoDB Atlas, PostgreSQL',
         'Analytics: Sketch Brains Data Analytics, Pandas, Exploratory Analysis'
       ];
@@ -68,7 +66,7 @@ export default function HackerTerminal() {
         '--- DIRECT CONTACT DATA ---',
         'Email: premkumaryadavat71@gmail.com',
         'GitHub: https://github.com/Premkumarattem',
-        'LinkedIn: https://linkedin.com/in/attem-prem-kumar',
+        'LinkedIn: https://www.linkedin.com/in/premkumarattem/',
         'Status: Available for Full-Time Software Engineering Roles'
       ];
     } else if (cleanCmd === 'hire' || cleanCmd === 'sudo hire') {

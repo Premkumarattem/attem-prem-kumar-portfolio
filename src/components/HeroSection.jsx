@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Sparkles, ArrowRight, Download, Terminal, Mail, Phone, MapPin, Copy, Check, ExternalLink, Code2 } from 'lucide-react';
+import { Sparkles, ArrowRight, Download, Terminal, Mail, Phone, MapPin, Copy, Check, ExternalLink, Code2, Linkedin, Github } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 export default function HeroSection({ onOpenResumeModal }) {
@@ -56,8 +56,8 @@ export default function HeroSection({ onOpenResumeModal }) {
       <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-12 items-center">
         {/* Left Column: Text & Intro */}
         <div className="lg:col-span-7 space-y-6 text-center lg:text-left z-10">
-          {/* Active Job Status Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#121218] border border-red-500/30 text-white text-xs font-mono shadow-[0_0_20px_rgba(239,68,68,0.25)]">
+          {/* Active Job Status Badge with pulse animation */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#121218] border border-red-500/30 text-white text-xs font-mono shadow-[0_0_20px_rgba(239,68,68,0.25)] hover:border-red-500/60 transition-all">
             <span className="relative flex h-2.5 w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
@@ -89,8 +89,32 @@ export default function HeroSection({ onOpenResumeModal }) {
             Final-year Computer Science student with hands-on work in full-stack web applications, AWS cloud, SAP ABAP, and data analytics. Experienced in building responsive web applications, Power BI dashboards, and using SQL and data modeling to turn complex data into clear insights.
           </p>
 
-          {/* Quick Contact Chips with Interactive Click to Copy */}
+          {/* Quick Contact Chips & Direct Social Links */}
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-1">
+            {/* Direct LinkedIn Button */}
+            <a
+              href="https://www.linkedin.com/in/premkumarattem/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[#14141c] border border-red-500/40 hover:border-red-500 hover:bg-red-600/10 text-white text-xs font-mono transition-all btn-click-effect shadow-sm group"
+            >
+              <Linkedin className="w-3.5 h-3.5 text-red-500 group-hover:scale-110 transition-transform" />
+              <span className="font-semibold">LinkedIn Profile</span>
+              <ExternalLink className="w-3 h-3 text-zinc-500 group-hover:text-red-400" />
+            </a>
+
+            {/* Direct GitHub Button */}
+            <a
+              href="https://github.com/Premkumarattem"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[#14141c] border border-zinc-800 hover:border-red-500 text-zinc-300 hover:text-white text-xs font-mono transition-all btn-click-effect group"
+            >
+              <Github className="w-3.5 h-3.5 text-red-400 group-hover:scale-110 transition-transform" />
+              <span>GitHub</span>
+            </a>
+
+            {/* Copy Email Button */}
             <button
               onClick={handleCopyEmail}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#14141c] border border-zinc-800 hover:border-red-500 text-zinc-300 hover:text-white text-xs font-mono transition-all btn-click-effect group"
@@ -101,6 +125,7 @@ export default function HeroSection({ onOpenResumeModal }) {
               {copiedEmail ? <Check className="w-3.5 h-3.5 text-green-400" /> : <Copy className="w-3 h-3 text-zinc-500 group-hover:text-red-400" />}
             </button>
 
+            {/* Copy Phone Button */}
             <button
               onClick={handleCopyPhone}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#14141c] border border-zinc-800 hover:border-red-500 text-zinc-300 hover:text-white text-xs font-mono transition-all btn-click-effect group"
@@ -110,11 +135,6 @@ export default function HeroSection({ onOpenResumeModal }) {
               <span>+91 6302871761</span>
               {copiedPhone ? <Check className="w-3.5 h-3.5 text-green-400" /> : <Copy className="w-3 h-3 text-zinc-500 group-hover:text-red-400" />}
             </button>
-
-            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#14141c] border border-zinc-800 text-zinc-400 text-xs font-mono">
-              <MapPin className="w-3.5 h-3.5 text-red-400" />
-              <span>Telangana, India</span>
-            </div>
           </div>
 
           {/* Key Tech Badges */}
@@ -138,11 +158,11 @@ export default function HeroSection({ onOpenResumeModal }) {
             ))}
           </div>
 
-          {/* Action CTAs */}
+          {/* Action CTAs with Shimmer Animation */}
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
             <a
               href="#projects"
-              className="w-full sm:w-auto flex items-center justify-center gap-3 px-7 py-3.5 rounded-xl font-mono font-bold text-sm bg-red-600 text-white shadow-[0_0_30px_rgba(239,68,68,0.4)] hover:bg-red-500 hover:shadow-[0_0_40px_rgba(239,68,68,0.6)] hover:scale-105 transition-all btn-click-effect"
+              className="w-full sm:w-auto flex items-center justify-center gap-3 px-7 py-3.5 rounded-xl font-mono font-bold text-sm bg-red-600 text-white shadow-[0_0_30px_rgba(239,68,68,0.45)] hover:bg-red-500 hover:shadow-[0_0_40px_rgba(239,68,68,0.65)] hover:scale-105 transition-all btn-click-effect shimmer-btn"
             >
               Explore 2 Featured Projects
               <ArrowRight className="w-4 h-4" />
@@ -158,9 +178,9 @@ export default function HeroSection({ onOpenResumeModal }) {
           </div>
         </div>
 
-        {/* Right Column: User Profile Image Card in Black & Red */}
+        {/* Right Column: User Profile Image Card in Black & Red with Gentle Float */}
         <div className="lg:col-span-5 flex justify-center z-10">
-          <div className="relative group max-w-sm w-full">
+          <div className="relative group max-w-sm w-full animate-float-gentle">
             {/* Outer Subtle Crimson Glow Frame */}
             <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-red-600 via-rose-600 to-red-800 opacity-60 blur-xl group-hover:opacity-100 transition duration-700 animate-pulse-slow"></div>
 

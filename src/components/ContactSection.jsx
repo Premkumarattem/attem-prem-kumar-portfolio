@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Linkedin, Github, Send, CheckCircle2, MapPin, Phone, Sparkles, MessageSquare, Copy, Check } from 'lucide-react';
+import { Mail, Linkedin, Github, Send, CheckCircle2, MapPin, Phone, Sparkles, MessageSquare, Copy, Check, ExternalLink } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 export default function ContactSection() {
@@ -69,11 +69,32 @@ export default function ContactSection() {
             <div className="glass-panel rounded-3xl p-8 space-y-6 border border-white/10 hover:border-red-500/40">
               <div className="space-y-1">
                 <h3 className="text-2xl font-bold text-white font-sans">Contact Details</h3>
-                <p className="text-xs text-zinc-400">Feel free to call, email, or connect via LinkedIn.</p>
+                <p className="text-xs text-zinc-400">Feel free to call, email, or connect directly on LinkedIn.</p>
               </div>
 
               {/* Direct Info Links with Copy Buttons */}
               <div className="space-y-3.5">
+                {/* LinkedIn Highlight Card */}
+                <a
+                  href="https://www.linkedin.com/in/premkumarattem/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-4 rounded-2xl bg-[#121218] border border-red-500/40 hover:border-red-500 hover:bg-red-950/20 transition-all flex items-center justify-between group btn-click-effect shadow-[0_0_20px_rgba(239,68,68,0.15)]"
+                >
+                  <div className="flex items-center gap-3.5">
+                    <div className="p-3 rounded-xl bg-red-600 text-white shadow-[0_0_15px_rgba(239,68,68,0.5)] group-hover:scale-110 transition-transform">
+                      <Linkedin className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-[10px] font-mono text-red-400 uppercase tracking-wider font-bold">LinkedIn Profile</p>
+                      <p className="font-mono text-xs sm:text-sm font-semibold text-white group-hover:text-red-400 transition-colors">
+                        linkedin.com/in/premkumarattem
+                      </p>
+                    </div>
+                  </div>
+                  <ExternalLink className="w-4 h-4 text-zinc-400 group-hover:text-red-400 group-hover:translate-x-0.5 transition-all" />
+                </a>
+
                 {/* Email */}
                 <div className="p-4 rounded-2xl bg-[#121218] border border-zinc-800 hover:border-red-500/40 transition-all flex items-center justify-between">
                   <div className="flex items-center gap-3.5">
@@ -131,23 +152,23 @@ export default function ContactSection() {
                   </div>
                 </div>
 
-                {/* Profiles */}
+                {/* GitHub & LinkedIn Secondary Links */}
                 <div className="grid grid-cols-2 gap-3 pt-2">
                   <a
-                    href="https://linkedin.com/in/attem-prem-kumar"
+                    href="https://www.linkedin.com/in/premkumarattem/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-xl bg-[#121218] border border-zinc-800 hover:border-red-500/40 text-center flex items-center justify-center gap-2 text-xs font-mono text-white hover:text-red-400 transition-all btn-click-effect"
+                    className="p-3 rounded-xl bg-[#121218] border border-zinc-800 hover:border-red-500 text-center flex items-center justify-center gap-2 text-xs font-mono text-white hover:text-red-400 transition-all btn-click-effect"
                   >
-                    <Linkedin className="w-4 h-4 text-red-500" /> LinkedIn
+                    <Linkedin className="w-4 h-4 text-red-500" /> LinkedIn Profile
                   </a>
                   <a
                     href="https://github.com/Premkumarattem"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-xl bg-[#121218] border border-zinc-800 hover:border-red-500/40 text-center flex items-center justify-center gap-2 text-xs font-mono text-white hover:text-red-400 transition-all btn-click-effect"
+                    className="p-3 rounded-xl bg-[#121218] border border-zinc-800 hover:border-red-500 text-center flex items-center justify-center gap-2 text-xs font-mono text-white hover:text-red-400 transition-all btn-click-effect"
                   >
-                    <Github className="w-4 h-4 text-red-500" /> GitHub
+                    <Github className="w-4 h-4 text-red-500" /> GitHub Profile
                   </a>
                 </div>
               </div>
@@ -240,7 +261,7 @@ export default function ContactSection() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-mono font-bold text-sm bg-red-600 text-white shadow-[0_0_25px_rgba(239,68,68,0.45)] hover:bg-red-500 hover:shadow-[0_0_35px_rgba(239,68,68,0.6)] transition-all disabled:opacity-50 btn-click-effect"
+                  className="w-full flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-mono font-bold text-sm bg-red-600 text-white shadow-[0_0_25px_rgba(239,68,68,0.45)] hover:bg-red-500 hover:shadow-[0_0_35px_rgba(239,68,68,0.6)] transition-all disabled:opacity-50 btn-click-effect shimmer-btn"
                 >
                   {loading ? (
                     <span>Sending Message...</span>

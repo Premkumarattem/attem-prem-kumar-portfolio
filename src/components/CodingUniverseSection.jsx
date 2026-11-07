@@ -1,8 +1,17 @@
 import React from 'react';
-import { Globe, Github, Code2, Terminal, ExternalLink, Sparkles, Award } from 'lucide-react';
+import { Globe, Github, Code2, Terminal, ExternalLink, Sparkles, Award, Linkedin } from 'lucide-react';
 
 export default function CodingUniverseSection() {
   const platforms = [
+    {
+      name: 'LinkedIn',
+      role: 'Professional Network & Experience',
+      handle: 'premkumarattem',
+      link: 'https://www.linkedin.com/in/premkumarattem/',
+      icon: <Linkedin className="w-7 h-7 text-red-500" />,
+      badge: 'Professional',
+      stats: 'Connect & Endorsements'
+    },
     {
       name: 'GitHub',
       role: 'Repositories & Open Source',
@@ -29,15 +38,6 @@ export default function CodingUniverseSection() {
       icon: <Terminal className="w-7 h-7 text-white" />,
       badge: 'Skill Badges',
       stats: 'Problem Solving & Python'
-    },
-    {
-      name: 'GeeksforGeeks',
-      role: 'Core CS Concepts & Data Structures',
-      handle: 'Attem Prem Kumar',
-      link: 'https://geeksforgeeks.org',
-      icon: <Globe className="w-7 h-7 text-red-400" />,
-      badge: 'CS Fundamentals',
-      stats: 'Algorithms & Architecture'
     }
   ];
 
@@ -47,13 +47,13 @@ export default function CodingUniverseSection() {
         {/* Section Header */}
         <div className="flex flex-col items-center text-center space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-950/50 border border-red-500/30 text-red-400 text-xs font-mono">
-            <Globe className="w-3.5 h-3.5" /> 08 &bull; CODING PLATFORMS
+            <Globe className="w-3.5 h-3.5" /> 08 &bull; CODING & PROFESSIONAL PLATFORMS
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white">
-            Developer Profiles & <span className="gradient-red-white">Ecosystem</span>
+            Developer Profiles & <span className="gradient-red-white">Network</span>
           </h2>
           <p className="text-zinc-400 text-sm max-w-xl font-mono">
-            Direct gateways to my GitHub code repositories and competitive programming handles.
+            Direct gateways to my LinkedIn professional profile, GitHub code repositories, and coding handles.
           </p>
           <div className="w-20 h-1 bg-red-600 rounded-full shadow-[0_0_15px_rgba(239,68,68,0.8)]"></div>
         </div>
